@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-cinzel: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #06080e;
+    color: #f1f5f9;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Metallic Gold Gradients and Glows */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #fde047 30%, #f59e0b 60%, #b45309 85%, #fef08a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glow {
+  text-shadow: 0 0 25px rgba(245, 158, 11, 0.6), 0 0 50px rgba(217, 119, 6, 0.35);
+}
+
+.gold-glow-subtle {
+  text-shadow: 0 0 15px rgba(245, 158, 11, 0.35);
+}
+
+.gold-box-glow {
+  box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.25), inset 0 0 20px rgba(245, 158, 11, 0.1);
+}
+
+.gold-box-active {
+  box-shadow: 0 0 45px rgba(245, 158, 11, 0.4), inset 0 0 25px rgba(245, 158, 11, 0.2);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(13, 17, 28, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.18);
+}
+
+.glass-panel-subtle {
+  background: rgba(10, 14, 23, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 3D perspective wrapper */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Subtle Shimmer Animation */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.gold-shimmer-btn {
+  background: linear-gradient(90deg, #b45309 0%, #f59e0b 25%, #fef08a 50%, #f59e0b 75%, #b45309 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 5s linear infinite;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080b12;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.6);
+}

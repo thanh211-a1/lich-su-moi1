@@ -1,0 +1,6 @@
+{
+  "name": "ĐẤU TRƯỜNG TRI THỨC LỊCH SỬ – CREATED BY TRẦN TIẾN THÀNH",
+  "description": "Website kiểm tra kiến thức lịch sử cao cấp, chuyên nghiệp với hiệu ứng điện ảnh 3D và chủ đề Văn Minh Ấn Độ Cổ Đại.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
